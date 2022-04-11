@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpViewController" customModule="zwallet" customModuleProvider="target">
+            <connections>
+                <outlet property="formWrapper" destination="gJ4-em-h1B" id="Wbx-gh-1Fz"/>
+                <outlet property="pin1" destination="B8T-Ck-pAP" id="91K-a5-h1x"/>
+                <outlet property="pin2" destination="rvu-ic-o1v" id="xdn-EG-wtf"/>
+                <outlet property="pin3" destination="62d-Ap-dwe" id="Pvn-l2-cta"/>
+                <outlet property="pin4" destination="baP-Q4-9PO" id="osx-nN-1lT"/>
+                <outlet property="pin5" destination="1KR-ga-U13" id="nhT-h8-zxv"/>
+                <outlet property="pin6" destination="D45-AJ-BRZ" id="Ozy-X1-VI4"/>
+                <outlet property="submitButton" destination="FIx-Cq-HNI" id="5Em-cW-skE"/>
+                <outlet property="view" destination="MhZ-1b-WXz" id="cVz-LW-VMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MhZ-1b-WXz">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZWallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQz-GO-NtE">
+                    <rect key="frame" x="160.5" y="119" width="93" height="31.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                    <color key="textColor" name="primaryColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJ4-em-h1B" userLabel="formWrapper">
+                    <rect key="frame" x="0.0" y="210.5" width="414" height="651.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input your OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdQ-XA-9vM">
+                            <rect key="frame" x="90" y="40" width="234" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF6-Qk-gIN">
+                            <rect key="frame" x="40.5" y="89" width="333" height="38.5"/>
+                            <string key="text">We have sent your OTP (One Time Password) 
+code via Email</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" name="descriptionColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q91-wT-D5b" userLabel="formOtp">
+                            <rect key="frame" x="16" y="177.5" width="382" height="60"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kfP-FD-D0x" userLabel="otp">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8T-Ck-pAP" userLabel="otp1">
+                                            <rect key="frame" x="0.0" y="0.0" width="59.5" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="56G-YE-EpZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="5s0-0L-Qac"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvu-ic-o1v" userLabel="otp2">
+                                            <rect key="frame" x="64.5" y="0.0" width="59.5" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="dbM-7v-At4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="QnZ-3M-0p0"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="62d-Ap-dwe" userLabel="otp3">
+                                            <rect key="frame" x="129" y="0.0" width="59.5" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="phT-Bf-Nrx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="HLJ-Go-OhM"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baP-Q4-9PO" userLabel="otp4">
+                                            <rect key="frame" x="193.5" y="0.0" width="59.5" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="BAr-ZI-ryW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="GS7-cU-68b"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1KR-ga-U13" userLabel="otp5">
+                                            <rect key="frame" x="258" y="0.0" width="59.5" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="Pmf-IY-uLT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="GF3-js-4g4"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D45-AJ-BRZ" userLabel="otp6">
+                                            <rect key="frame" x="322.5" y="0.0" width="59.5" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="3Xf-sE-eWQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="eTf-RN-ehG"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="xZ0-aI-71k"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-Cq-HNI">
+                            <rect key="frame" x="16" y="584.5" width="382" height="57"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="57" id="EpA-jc-BZi"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Confirm" cornerStyle="large">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                <color key="baseForegroundColor" name="titleDarkColor"/>
+                                <color key="baseBackgroundColor" name="descriptionColor"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="FIx-Cq-HNI" firstAttribute="leading" secondItem="gJ4-em-h1B" secondAttribute="leading" constant="16" id="7Rg-Zp-Wpv"/>
+                        <constraint firstItem="q91-wT-D5b" firstAttribute="top" secondItem="ZF6-Qk-gIN" secondAttribute="bottom" constant="50" id="E3Y-mc-XqR"/>
+                        <constraint firstItem="NdQ-XA-9vM" firstAttribute="top" secondItem="gJ4-em-h1B" secondAttribute="top" constant="40" id="NTZ-uG-26w"/>
+                        <constraint firstAttribute="trailing" secondItem="FIx-Cq-HNI" secondAttribute="trailing" constant="16" id="QqY-63-XZ1"/>
+                        <constraint firstItem="q91-wT-D5b" firstAttribute="leading" secondItem="gJ4-em-h1B" secondAttribute="leading" constant="16" id="aF6-S7-hfl"/>
+                        <constraint firstAttribute="bottom" secondItem="FIx-Cq-HNI" secondAttribute="bottom" constant="10" id="hiz-iv-HuB"/>
+                        <constraint firstItem="ZF6-Qk-gIN" firstAttribute="top" secondItem="NdQ-XA-9vM" secondAttribute="bottom" constant="20" id="ih2-pN-4fl"/>
+                        <constraint firstItem="ZF6-Qk-gIN" firstAttribute="centerX" secondItem="gJ4-em-h1B" secondAttribute="centerX" id="o07-kT-5NZ"/>
+                        <constraint firstItem="NdQ-XA-9vM" firstAttribute="centerX" secondItem="gJ4-em-h1B" secondAttribute="centerX" id="pgS-S3-zxO"/>
+                        <constraint firstAttribute="trailing" secondItem="q91-wT-D5b" secondAttribute="trailing" constant="16" id="zUH-YS-lha"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="J2S-lq-7Ay"/>
+            <color key="backgroundColor" name="backgrounfColor"/>
+            <constraints>
+                <constraint firstItem="SQz-GO-NtE" firstAttribute="top" secondItem="J2S-lq-7Ay" secondAttribute="top" constant="75" id="AJK-aE-Lvt"/>
+                <constraint firstItem="gJ4-em-h1B" firstAttribute="top" secondItem="SQz-GO-NtE" secondAttribute="bottom" constant="60" id="I5S-Lm-yjb"/>
+                <constraint firstItem="J2S-lq-7Ay" firstAttribute="trailing" secondItem="gJ4-em-h1B" secondAttribute="trailing" id="Ta4-7m-lJy"/>
+                <constraint firstItem="gJ4-em-h1B" firstAttribute="leading" secondItem="J2S-lq-7Ay" secondAttribute="leading" id="cq8-pQ-MCe"/>
+                <constraint firstItem="SQz-GO-NtE" firstAttribute="centerX" secondItem="MhZ-1b-WXz" secondAttribute="centerX" id="g75-Eh-va3"/>
+                <constraint firstItem="J2S-lq-7Ay" firstAttribute="bottom" secondItem="gJ4-em-h1B" secondAttribute="bottom" id="wRa-4Y-F7Y"/>
+            </constraints>
+            <point key="canvasLocation" x="-465" y="143"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="backgrounfColor">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="descriptionColor">
+            <color red="0.22745098039215686" green="0.23921568627450981" blue="0.25882352941176473" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primaryColor">
+            <color red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="titleDarkColor">
+            <color red="0.22745098039215686" green="0.23921568627450981" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

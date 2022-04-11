@@ -19,6 +19,14 @@
 		121295742803D2460015719C /* TransferRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121295692803D2460015719C /* TransferRouterImpl.swift */; };
 		121295752803D2460015719C /* TransferRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212956A2803D2460015719C /* TransferRouterProtocol.swift */; };
 		121295782803D5C90015719C /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = 121295772803D5C90015719C /* netfox */; };
+		1212958B2804106A0015719C /* OtpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 121295892804106A0015719C /* OtpViewController.xib */; };
+		1212958C2804106A0015719C /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212958A2804106A0015719C /* OtpViewController.swift */; };
+		12129592280410B40015719C /* OtpRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12129591280410B40015719C /* OtpRouterProtocol.swift */; };
+		12129594280410C80015719C /* OtpRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12129593280410C80015719C /* OtpRouterImpl.swift */; };
+		12129596280410EA0015719C /* OtpPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12129595280410EA0015719C /* OtpPresenterProtocol.swift */; };
+		12129598280411030015719C /* OtpPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12129597280411030015719C /* OtpPresenterImpl.swift */; };
+		1212959A280411200015719C /* OtpInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12129599280411200015719C /* OtpInteractorProtocol.swift */; };
+		1212959C280411430015719C /* OtpInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1212959B280411430015719C /* OtpInteractorImpl.swift */; };
 		12203F4B2800363400830A7D /* AuthApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12203F4A2800363400830A7D /* AuthApi.swift */; };
 		12632F5727FDEF4000CBDC9F /* RegisterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12632F5627FDEF4000CBDC9F /* RegisterEntity.swift */; };
 		1279EAF427FD79D20037C8A7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1279EAF227FD79D20037C8A7 /* RegisterViewController.swift */; };
@@ -118,6 +126,14 @@
 		121295672803D2460015719C /* TransferInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferInteractorOutput.swift; sourceTree = "<group>"; };
 		121295692803D2460015719C /* TransferRouterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferRouterImpl.swift; sourceTree = "<group>"; };
 		1212956A2803D2460015719C /* TransferRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferRouterProtocol.swift; sourceTree = "<group>"; };
+		121295892804106A0015719C /* OtpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtpViewController.xib; sourceTree = "<group>"; };
+		1212958A2804106A0015719C /* OtpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		12129591280410B40015719C /* OtpRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpRouterProtocol.swift; sourceTree = "<group>"; };
+		12129593280410C80015719C /* OtpRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpRouterImpl.swift; sourceTree = "<group>"; };
+		12129595280410EA0015719C /* OtpPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpPresenterProtocol.swift; sourceTree = "<group>"; };
+		12129597280411030015719C /* OtpPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpPresenterImpl.swift; sourceTree = "<group>"; };
+		12129599280411200015719C /* OtpInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpInteractorProtocol.swift; sourceTree = "<group>"; };
+		1212959B280411430015719C /* OtpInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpInteractorImpl.swift; sourceTree = "<group>"; };
 		12203F4A2800363400830A7D /* AuthApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthApi.swift; sourceTree = "<group>"; };
 		12632F5627FDEF4000CBDC9F /* RegisterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEntity.swift; sourceTree = "<group>"; };
 		1279EAF227FD79D20037C8A7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -300,6 +316,61 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		121295872804106A0015719C /* OtpModule */ = {
+			isa = PBXGroup;
+			children = (
+				121295902804109D0015719C /* Router */,
+				1212958F280410940015719C /* Entity */,
+				1212958E2804108B0015719C /* Presenter */,
+				1212958D2804107E0015719C /* Interactor */,
+				121295882804106A0015719C /* View */,
+			);
+			path = OtpModule;
+			sourceTree = "<group>";
+		};
+		121295882804106A0015719C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				121295892804106A0015719C /* OtpViewController.xib */,
+				1212958A2804106A0015719C /* OtpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1212958D2804107E0015719C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				12129599280411200015719C /* OtpInteractorProtocol.swift */,
+				1212959B280411430015719C /* OtpInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1212958E2804108B0015719C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				12129595280410EA0015719C /* OtpPresenterProtocol.swift */,
+				12129597280411030015719C /* OtpPresenterImpl.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1212958F280410940015719C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		121295902804109D0015719C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				12129591280410B40015719C /* OtpRouterProtocol.swift */,
+				12129593280410C80015719C /* OtpRouterImpl.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		12632F5327FDEC9500CBDC9F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +447,7 @@
 		B01228AF27F43089009D7F98 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				121295872804106A0015719C /* OtpModule */,
 				1212955A2803D2460015719C /* TransferModule */,
 				1279EAF027FD79A80037C8A7 /* RegisterModule */,
 				B04F663227FDDDA800825DE8 /* HistoryModule */,
@@ -825,6 +897,7 @@
 				B0F0F9FD27F3342E00874BCF /* LaunchScreen.storyboard in Resources */,
 				B0F0F9FA27F3342E00874BCF /* Assets.xcassets in Resources */,
 				1279EAF527FD79D20037C8A7 /* RegisterViewController.xib in Resources */,
+				1212958B2804106A0015719C /* OtpViewController.xib in Resources */,
 				B0D2D3C227FDCF910048761D /* TransactionCell.xib in Resources */,
 				B01228BE27F43F9F009D7F98 /* LoginViewController.xib in Resources */,
 				B04F663D27FDDEEF00825DE8 /* HistoryViewController.xib in Resources */,
@@ -866,6 +939,7 @@
 				B01E55C227F96C0500949205 /* LoginRouterImpl.swift in Sources */,
 				121295732803D2460015719C /* TransferInteractorOutput.swift in Sources */,
 				B01E55B827F952C300949205 /* LoginPresenterImpl.swift in Sources */,
+				1212959C280411430015719C /* OtpInteractorImpl.swift in Sources */,
 				12E9CEB727FDAD8900247CEC /* RegisterPresenterImpl.swift in Sources */,
 				B0F4E5B627FDBFDE0053CE3B /* HomePresenter.swift in Sources */,
 				121295752803D2460015719C /* TransferRouterProtocol.swift in Sources */,
@@ -888,8 +962,11 @@
 				B01E55BE27F9597B00949205 /* LoginInteractorOutputProtocol.swift in Sources */,
 				B04F664D27FDE10200825DE8 /* HistoryInteractorOutput.swift in Sources */,
 				B0F4E5DA27FDCB5C0053CE3B /* GetBalanceDataResponse.swift in Sources */,
+				12129592280410B40015719C /* OtpRouterProtocol.swift in Sources */,
 				B0D2D3C127FDCF910048761D /* TransactionCell.swift in Sources */,
+				12129598280411030015719C /* OtpPresenterImpl.swift in Sources */,
 				B0F4E5AA27FDBED20053CE3B /* UserProfileEntity.swift in Sources */,
+				12129596280410EA0015719C /* OtpPresenterProtocol.swift in Sources */,
 				B00DA4A527F6D24200256682 /* AuthNetworkManager.swift in Sources */,
 				12E9CEB127FDA9C600247CEC /* RegisterInteractorImpl.swift in Sources */,
 				12632F5727FDEF4000CBDC9F /* RegisterEntity.swift in Sources */,
@@ -900,9 +977,11 @@
 				B0F4E5A727FDBE830053CE3B /* HomeRouterImpl.swift in Sources */,
 				B04F664927FDE0C100825DE8 /* HistoryInteractorImpl.swift in Sources */,
 				B0D2D3BC27FDCEFE0048761D /* TransactionEntity.swift in Sources */,
+				1212958C2804106A0015719C /* OtpViewController.swift in Sources */,
 				B0F0FA0527F3350700874BCF /* LoginViewController2.swift in Sources */,
 				B0F0F9F527F3342D00874BCF /* ViewController.swift in Sources */,
 				12E9CEB527FDAD7500247CEC /* RegisterPresenterProtocol.swift in Sources */,
+				1212959A280411200015719C /* OtpInteractorProtocol.swift in Sources */,
 				121295742803D2460015719C /* TransferRouterImpl.swift in Sources */,
 				B02C583E27FAD56600C9EA0B /* AppConstant.swift in Sources */,
 				B0C62DF327F9F23A00B1732D /* UserDefaultHelper.swift in Sources */,
@@ -916,6 +995,7 @@
 				12E9CEB327FDAB2500247CEC /* RegisterInteractorOutput.swift in Sources */,
 				12E9CEAB27FDA69300247CEC /* RegisterRouterImpl.swift in Sources */,
 				B01E55C027F95CD200949205 /* LoginInteractorImpl.swift in Sources */,
+				12129594280410C80015719C /* OtpRouterImpl.swift in Sources */,
 				B0F0F9F127F3342D00874BCF /* AppDelegate.swift in Sources */,
 				B0F4E5A527FDBE6F0053CE3B /* HomeRouter.swift in Sources */,
 				B01228BC27F43F41009D7F98 /* LoginViewController.swift in Sources */,
