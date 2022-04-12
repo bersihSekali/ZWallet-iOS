@@ -9,5 +9,6 @@ import Foundation
 import UIKit
 
 protocol RegisterRouterProtocol {
+    func navigateToOtp(viewController: UIViewController)
     func navigateToLogin(viewController: UIViewController)
 }

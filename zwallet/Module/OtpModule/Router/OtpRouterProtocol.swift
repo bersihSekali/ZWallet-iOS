@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import UIKit
+
+protocol OtpRouterProtocol {
+    func navigateToLogin(viewController: UIViewController)
+}

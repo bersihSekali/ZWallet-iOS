@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+protocol OtpPresenterProtocol {
+    func confirmOtp(email: String, otp: String?)
+    func dismissPage(vc: UIViewController)
+}

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol OtpInteractorProtocol {
+    func confirmOtp(email: String, otp: String)
+}

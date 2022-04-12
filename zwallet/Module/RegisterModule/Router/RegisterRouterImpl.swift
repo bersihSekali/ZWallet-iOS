@@ -29,4 +29,8 @@ extension RegisterRouterImpl: RegisterRouterProtocol {
     func navigateToLogin(viewController: UIViewController) {
         LoginRouterImpl.navigateToModule()
     }
+    
+    func navigateToOtp(viewController: UIViewController) {
+        OtpRouterImpl.navigateToModule(viewController: viewController)
+    }
 }

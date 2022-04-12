@@ -17,6 +17,8 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pin6: UITextField!
     @IBOutlet weak var formWrapper: UIView!
     @IBOutlet weak var submitButton: UIButton!
+    var presenter: OtpPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +33,7 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
         pin6.addTarget(self, action: #selector(self.textDidChange(textField:)), for: UIControl.Event.editingChanged)
 
 
-        // Do any additional setup after loading the view.
+        submitButton.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +57,7 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
                 break
             case pin4:
                 pin5.becomeFirstResponder()
+                print(pin4.text)
                 break
             case pin5:
                 pin6.becomeFirstResponder()
@@ -64,6 +67,7 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
                 submitButton.backgroundColor = UIColor(named: "primaryColor")
                 submitButton.layer.cornerRadius = 10
                 submitButton.titleLabel?.textColor = UIColor(ciColor: .white)
+                submitButton.isEnabled = true
                 break
             }
         }
@@ -72,16 +76,39 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func confirmButtonAction(_ sender: Any) {
+        let email: String = UserDefaultHelper.shared.get(key: .userEmail) ?? ""
+        let pin1 = pin1.text ?? ""
+        let pin2 = pin2.text ?? ""
+        let pin3 = pin3.text ?? ""
+        let pin4 = pin4.text ?? ""
+        let pin5 = pin5.text ?? ""
+        let pin6 = pin6.text ?? ""
+        
+        let otp: String = "\(pin1)\(pin2)\(pin3)\(pin4)\(pin5)\(pin6)"
+        print(otp)
+        
+        self.presenter?.confirmOtp(email: email, otp: otp)
     }
-    */
+}
 
+extension OtpViewController: OtpViewProtocol {
+    func showSuccess() {
+        let successAlert = UIAlertController(title: "Registration Success", message: "Login tou your new account to access all features of ZWallet", preferredStyle: .alert)
+        successAlert.addAction(UIAlertAction(title: "OK ;)", style: .default, handler: { _ in
+            self.presenter?.dismissPage(vc: self)
+        }))
+        present(successAlert, animated: true, completion: nil)
+    }
+    
+    func showError() {
+        let successAlert = UIAlertController(title: "Registration Failed", message: "Please input again your otp code", preferredStyle: .alert)
+        successAlert.addAction(UIAlertAction(title: "OK ;)", style: .default, handler: { _ in
+            
+        }))
+        present(successAlert, animated: true, completion: nil)
+    }
+    
+    
 }

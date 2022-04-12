@@ -6,3 +6,23 @@
 //
 
 import Foundation
+
+class OtpInteractorImpl: OtpInteractorProtocol {
+    var interactorOutput: OtpInteractorOutput?
+    let authNetworkManager: AuthNetworkManager
+    
+    init(networkManager: AuthNetworkManager) {
+        self.authNetworkManager = networkManager
+    }
+    
+    func confirmOtp(email: String, otp: String) {
+        self.authNetworkManager.confirmOtp(email: email, otp: otp) { data, error in
+            if let otpData = data {
+                self.interactorOutput?.otpResult(isSuccess: true)
+            } else {
+                self.interactorOutput?.otpResult(isSuccess: false)
+            }
+        }
+
+    }
+}

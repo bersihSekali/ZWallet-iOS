@@ -140,6 +140,9 @@ code via Email</string>
                                 <color key="baseForegroundColor" name="titleDarkColor"/>
                                 <color key="baseBackgroundColor" name="descriptionColor"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="confirmButtonAction:" destination="-1" eventType="touchUpInside" id="Ksq-Qz-jus"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

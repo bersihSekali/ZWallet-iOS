@@ -97,7 +97,7 @@ class RegisterViewController: UIViewController  {
     }
     
     @IBAction func signInButtonAction(_ sender: Any) {
-        self.presenter?.loginPage(viewController: self)
+        self.presenter?.dismissPage(vc: self)
     }
 }
 
@@ -105,7 +105,7 @@ extension RegisterViewController: RegisterViewProtocol {
     func showSuccess() {
         let successAlert = UIAlertController(title: "Registration Success", message: "Registration success, check your email to activating your account", preferredStyle: .alert)
         successAlert.addAction(UIAlertAction(title: "OK ;)", style: .default, handler: { _ in
-            self.presenter?.dismissPage(vc: self)
+            self.presenter?.otpPage(viewController: self)
         }))
         present(successAlert, animated: true, completion: nil)
     }
@@ -113,7 +113,7 @@ extension RegisterViewController: RegisterViewProtocol {
     func showError() {
         let successAlert = UIAlertController(title: "Registration Failed", message: "Email already exist, please choose another email!", preferredStyle: .alert)
         successAlert.addAction(UIAlertAction(title: "OK ;)", style: .default, handler: { _ in
-            self.presenter?.dismissPage(vc: self)
+            
         }))
         present(successAlert, animated: true, completion: nil)
     }

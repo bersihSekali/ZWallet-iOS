@@ -47,4 +47,22 @@ public class AuthNetworkManagerImpl: AuthNetworkManager{
             }
         }
     }
+    
+    
+    public func confirmOtp(email: String, otp: String, completion: @escaping (ConfirmOtpResponse?, Error?) -> ()) {
+        let provider = MoyaProvider<AuthApi>()
+        provider.request(.confirmOTP(email: email, otp: otp)) { result in switch result {
+            case .success(let res):
+                let decoder = JSONDecoder()
+                do {
+                    let confirmOtpRegister = try decoder.decode(ConfirmOtpResponse.self, from: res.data)
+                    completion(confirmOtpRegister, nil)
+                } catch {
+                    completion(nil, error)
+                }
+            case .failure(let err):
+                completion(nil, err)
+            }
+        }
+    }
 }

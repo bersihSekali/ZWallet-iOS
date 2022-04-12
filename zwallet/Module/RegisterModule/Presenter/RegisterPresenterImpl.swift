@@ -24,8 +24,8 @@ class RegisterPresenterImpl: RegisterPresenterProtocol {
         self.interactor.postRegisterData(username: username, email: email, password: password)
     }
     
-    func loginPage(viewController: UIViewController) {
-        self.router.navigateToLogin(viewController: viewController)
+    func otpPage(viewController: UIViewController) {
+        self.router.navigateToOtp(viewController: viewController)
     }
     
     func dismissPage(vc: UIViewController) {
