@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var eyeSlashButton: UIButton!
     @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var formWrapper: UIView!
     
     var presenter: LoginPresenterProtocol?
     
@@ -32,8 +33,13 @@ class LoginViewController: UIViewController {
         inputEmailField.delegate = self
         inputPasswordField.delegate = self
         errorMessage.text = ""
-
-        // Do any additional setup after loading the view.
+        
+        formWrapper.layer.cornerRadius = 50
+        formWrapper.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        loginButton.layer.cornerRadius = 30
+        loginButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
         self.zwalletLabel.font = UIFont(name: "NunitoSans-Bold", size: 26)
         self.zwalletLabel.textColor = UIColor(named: "Primary")
 
@@ -55,17 +61,6 @@ class LoginViewController: UIViewController {
         self.loginButton.titleLabel?.font = NunitoFonts.nunitoBold(sizeOf: 18)
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func eyeSlashButton(_ sender: UIButton) {
         if inputPasswordField.isSecureTextEntry {
             inputPasswordField.isSecureTextEntry = false

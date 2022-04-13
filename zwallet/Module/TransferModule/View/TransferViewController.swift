@@ -9,6 +9,8 @@ import UIKit
 
 class TransferViewController: UIViewController {
 
+    @IBOutlet weak var receiverWrapper: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var transferButton: UIButton!
     @IBOutlet weak var notesField: UITextField!
     @IBOutlet weak var balanceLabel: UILabel!
@@ -24,6 +26,12 @@ class TransferViewController: UIViewController {
 
         amountLabel.delegate = self
         notesField.delegate = self
+        
+        receiverWrapper.layer.cornerRadius = 20
+        receiverWrapper.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+        
+        transferButton.layer.cornerRadius = 10
+        transferButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -79,9 +87,10 @@ extension TransferViewController: TransferView {
     }
     
     func showError() {
-        let successAlert = UIAlertController(title: "Transfer Failed", message: "Your transfe cannot be proceed", preferredStyle: .alert)
+        let successAlert = UIAlertController(title: "Transfer Failed", message: "Your transfer cannot be proceed", preferredStyle: .alert)
         successAlert.addAction(UIAlertAction(title: "OK ;)", style: .default, handler: { _ in
-            self.presenter?.dissmisPage(vc: self)
+            self.errorLabel.text = "Wrong Pin!"
+            self.errorLabel.textColor = UIColor(ciColor: .red)
         }))
         present(successAlert, animated: true, completion: nil)
     }

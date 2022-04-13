@@ -13,10 +13,12 @@
             <connections>
                 <outlet property="amountLabel" destination="K7H-OO-1hn" id="eeo-oj-BC1"/>
                 <outlet property="balanceLabel" destination="3Ky-Zx-X5T" id="6fV-h4-ku6"/>
+                <outlet property="errorLabel" destination="u6f-3F-IX4" id="pSe-UF-zjf"/>
                 <outlet property="notesField" destination="3T7-WE-Eu5" id="jY8-WG-1eF"/>
                 <outlet property="receiverImage" destination="zFP-Tv-qDH" id="4F6-NT-as5"/>
                 <outlet property="receiverName" destination="MT4-YP-KDW" id="vO0-oC-iIm"/>
                 <outlet property="receiverPhoneNumber" destination="XUJ-QW-yIG" id="ZTt-hb-1Lx"/>
+                <outlet property="receiverWrapper" destination="3Q5-8T-Oag" id="PRj-EU-DFM"/>
                 <outlet property="transferButton" destination="dYS-Mi-iza" id="zd4-9v-WEX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -123,6 +125,12 @@
                         <action selector="transferButtonActioin:" destination="-1" eventType="touchUpInside" id="W0F-u2-NfT"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6f-3F-IX4" userLabel="Error">
+                    <rect key="frame" x="16" y="534.5" width="382" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -140,8 +148,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dYS-Mi-iza" secondAttribute="trailing" constant="16" id="bZg-k1-t6a"/>
                 <constraint firstItem="dYS-Mi-iza" firstAttribute="top" secondItem="3T7-WE-Eu5" secondAttribute="bottom" constant="314" id="g6V-WJ-uFs"/>
                 <constraint firstItem="3Ky-Zx-X5T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hiW-38-2V8"/>
+                <constraint firstItem="u6f-3F-IX4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mEg-tJ-XQM"/>
+                <constraint firstItem="u6f-3F-IX4" firstAttribute="top" secondItem="3T7-WE-Eu5" secondAttribute="bottom" constant="40" id="mld-LP-9K5"/>
                 <constraint firstItem="3T7-WE-Eu5" firstAttribute="top" secondItem="3Ky-Zx-X5T" secondAttribute="bottom" constant="60" id="nMc-qf-6xp"/>
                 <constraint firstItem="UI0-xH-k7P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nzh-0x-dXb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="u6f-3F-IX4" secondAttribute="trailing" constant="16" id="pXJ-ma-g6Y"/>
                 <constraint firstItem="3Ky-Zx-X5T" firstAttribute="top" secondItem="K7H-OO-1hn" secondAttribute="bottom" constant="22" id="sPZ-CX-J0P"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>

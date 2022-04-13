@@ -36,6 +36,9 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
         pin5.layer.borderWidth = 1
         pin6.layer.borderWidth = 1
         
+        submitButton.layer.cornerRadius = 10
+        submitButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+        
         pin1.layer.cornerRadius = 5
         pin1.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
         
