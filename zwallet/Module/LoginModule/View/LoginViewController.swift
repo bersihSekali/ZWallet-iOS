@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
         formWrapper.layer.cornerRadius = 50
         formWrapper.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        loginButton.layer.cornerRadius = 30
+        loginButton.layer.cornerRadius = 20
         loginButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
         self.zwalletLabel.font = UIFont(name: "NunitoSans-Bold", size: 26)

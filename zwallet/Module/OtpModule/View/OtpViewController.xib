@@ -142,8 +142,11 @@ code via Email</string>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCB-tK-gik">
-                    <rect key="frame" x="16" y="783" width="382" height="39"/>
+                    <rect key="frame" x="16" y="780" width="382" height="57"/>
                     <color key="backgroundColor" name="GrayButton"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="SlD-KN-6qO"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Confirm">
                         <fontDescription key="titleFontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="18"/>
@@ -157,7 +160,7 @@ code via Email</string>
             <viewLayoutGuide key="safeArea" id="J2S-lq-7Ay"/>
             <color key="backgroundColor" name="backgrounfColor"/>
             <constraints>
-                <constraint firstItem="J2S-lq-7Ay" firstAttribute="bottom" secondItem="SCB-tK-gik" secondAttribute="bottom" constant="40" id="0y1-dd-i3S"/>
+                <constraint firstItem="J2S-lq-7Ay" firstAttribute="bottom" secondItem="SCB-tK-gik" secondAttribute="bottom" constant="25" id="0y1-dd-i3S"/>
                 <constraint firstItem="SQz-GO-NtE" firstAttribute="top" secondItem="J2S-lq-7Ay" secondAttribute="top" constant="75" id="AJK-aE-Lvt"/>
                 <constraint firstItem="SCB-tK-gik" firstAttribute="leading" secondItem="J2S-lq-7Ay" secondAttribute="leading" constant="16" id="ECN-tY-4eF"/>
                 <constraint firstItem="gJ4-em-h1B" firstAttribute="top" secondItem="SQz-GO-NtE" secondAttribute="bottom" constant="60" id="I5S-Lm-yjb"/>

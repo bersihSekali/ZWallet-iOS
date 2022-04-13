@@ -9,6 +9,7 @@ import UIKit
 
 class TransferViewController: UIViewController {
 
+    @IBOutlet weak var profileWrapper: UIView!
     @IBOutlet weak var receiverWrapper: UIView!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var transferButton: UIButton!
@@ -27,10 +28,13 @@ class TransferViewController: UIViewController {
         amountLabel.delegate = self
         notesField.delegate = self
         
+        profileWrapper.layer.cornerRadius = 50
+        profileWrapper.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
         receiverWrapper.layer.cornerRadius = 20
         receiverWrapper.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
         
-        transferButton.layer.cornerRadius = 10
+        transferButton.layer.cornerRadius = 20
         transferButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
     

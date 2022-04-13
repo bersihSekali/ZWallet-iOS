@@ -152,10 +152,10 @@ to access all the features in zWallet</string>
                             <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-wl-CIN">
-                            <rect key="frame" x="8" y="516.5" width="398" height="50"/>
+                            <rect key="frame" x="8" y="516.5" width="398" height="57"/>
                             <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="2Qc-vJ-1KV"/>
+                                <constraint firstAttribute="height" constant="57" id="2Qc-vJ-1KV"/>
                             </constraints>
                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                             <state key="normal" title="Button"/>
@@ -173,16 +173,16 @@ to access all the features in zWallet</string>
                             </buttonConfiguration>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4Y-yf-IAt">
-                            <rect key="frame" x="8" y="576.5" width="398" height="21.5"/>
+                            <rect key="frame" x="8" y="583.5" width="398" height="14.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Let's" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF6-7y-HdE">
-                                    <rect key="frame" x="0.0" y="0.0" width="278" height="21.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="278" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-Fb-jFF">
-                                    <rect key="frame" x="278" y="0.0" width="120" height="21.5"/>
+                                    <rect key="frame" x="278" y="0.0" width="120" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="120" id="xgo-hP-hVp"/>
                                     </constraints>

@@ -43,39 +43,11 @@ class RegisterViewController: UIViewController  {
         self.inputEmail.textColor = UIColor(named: "Black")
         self.inputPassword.textColor = UIColor(named: "Black")
         
-        let corners = UIRectCorner(arrayLiteral: [
-            UIRectCorner.topLeft,
-            UIRectCorner.topRight,
-            UIRectCorner.bottomLeft,
-            UIRectCorner.bottomRight
-        ])
+        contentView.layer.cornerRadius = 50
+        contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        let cornerRadii = CGSize(
-            width: 30,
-            height: 30
-        )
-        
-        let maskPath = UIBezierPath(
-            roundedRect: contentView.bounds,
-            byRoundingCorners: corners,
-            cornerRadii: cornerRadii
-        )
-        
-        let maskPathButton = UIBezierPath(
-            roundedRect: signUpButton.bounds,
-            byRoundingCorners: corners,
-            cornerRadii: cornerRadii
-        )
-        
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = maskPath.cgPath
-        maskLayer.frame = contentView.bounds
-        contentView.layer.mask = maskLayer
-        
-        let maskLayerButton = CAShapeLayer()
-        maskLayerButton.path = maskPathButton.cgPath
-        maskLayerButton.frame = signUpButton.bounds
-        signUpButton.layer.mask = maskLayerButton
+        signUpButton.layer.cornerRadius = 20
+        signUpButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
     
     @IBAction func eyeSlashButtonAction(_ sender: Any) {

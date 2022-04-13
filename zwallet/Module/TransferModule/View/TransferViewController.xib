@@ -15,6 +15,7 @@
                 <outlet property="balanceLabel" destination="3Ky-Zx-X5T" id="6fV-h4-ku6"/>
                 <outlet property="errorLabel" destination="u6f-3F-IX4" id="pSe-UF-zjf"/>
                 <outlet property="notesField" destination="3T7-WE-Eu5" id="jY8-WG-1eF"/>
+                <outlet property="profileWrapper" destination="UI0-xH-k7P" id="d0t-xs-SEI"/>
                 <outlet property="receiverImage" destination="zFP-Tv-qDH" id="4F6-NT-as5"/>
                 <outlet property="receiverName" destination="MT4-YP-KDW" id="vO0-oC-iIm"/>
                 <outlet property="receiverPhoneNumber" destination="XUJ-QW-yIG" id="ZTt-hb-1Lx"/>
@@ -111,8 +112,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-Mi-iza">
-                    <rect key="frame" x="16" y="808.5" width="382" height="43.5"/>
+                    <rect key="frame" x="16" y="795" width="382" height="57"/>
                     <color key="backgroundColor" name="GrayButton"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="6nk-wW-mZP"/>
+                    </constraints>
                     <color key="tintColor" name="DarkGrayText"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Transfer">
@@ -148,7 +152,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K7H-OO-1hn" secondAttribute="trailing" constant="16" id="abg-QD-5zZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dYS-Mi-iza" secondAttribute="bottom" constant="10" id="an5-kd-q57"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dYS-Mi-iza" secondAttribute="trailing" constant="16" id="bZg-k1-t6a"/>
-                <constraint firstItem="dYS-Mi-iza" firstAttribute="top" secondItem="3T7-WE-Eu5" secondAttribute="bottom" constant="314" id="g6V-WJ-uFs"/>
                 <constraint firstItem="3Ky-Zx-X5T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hiW-38-2V8"/>
                 <constraint firstItem="u6f-3F-IX4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="mEg-tJ-XQM"/>
                 <constraint firstItem="u6f-3F-IX4" firstAttribute="top" secondItem="3T7-WE-Eu5" secondAttribute="bottom" constant="40" id="mld-LP-9K5"/>
