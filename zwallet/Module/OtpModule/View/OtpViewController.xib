@@ -56,68 +56,68 @@ code via Email</string>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kfP-FD-D0x" userLabel="otp">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="60"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8T-Ck-pAP" userLabel="otp1">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8T-Ck-pAP" userLabel="otp1">
                                             <rect key="frame" x="0.0" y="0.0" width="59.5" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="56G-YE-EpZ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="5s0-0L-Qac"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvu-ic-o1v" userLabel="otp2">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvu-ic-o1v" userLabel="otp2">
                                             <rect key="frame" x="64.5" y="0.0" width="59.5" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="dbM-7v-At4"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="QnZ-3M-0p0"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="62d-Ap-dwe" userLabel="otp3">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="62d-Ap-dwe" userLabel="otp3">
                                             <rect key="frame" x="129" y="0.0" width="59.5" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="phT-Bf-Nrx"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="HLJ-Go-OhM"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baP-Q4-9PO" userLabel="otp4">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baP-Q4-9PO" userLabel="otp4">
                                             <rect key="frame" x="193.5" y="0.0" width="59.5" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="BAr-ZI-ryW"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="GS7-cU-68b"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1KR-ga-U13" userLabel="otp5">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1KR-ga-U13" userLabel="otp5">
                                             <rect key="frame" x="258" y="0.0" width="59.5" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="Pmf-IY-uLT"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="GF3-js-4g4"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D45-AJ-BRZ" userLabel="otp6">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D45-AJ-BRZ" userLabel="otp6">
                                             <rect key="frame" x="322.5" y="0.0" width="59.5" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="3Xf-sE-eWQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="eTf-RN-ehG"/>
                                             </connections>
@@ -142,11 +142,11 @@ code via Email</string>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCB-tK-gik">
-                    <rect key="frame" x="16" y="788.5" width="382" height="33.5"/>
+                    <rect key="frame" x="16" y="783" width="382" height="39"/>
                     <color key="backgroundColor" name="GrayButton"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Confirm">
-                        <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                        <fontDescription key="titleFontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="18"/>
                         <color key="baseForegroundColor" name="GrayButtonLabel"/>
                     </buttonConfiguration>
                     <connections>

@@ -66,8 +66,7 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
         pin4.addTarget(self, action: #selector(self.textDidChange(textField:)), for: UIControl.Event.editingChanged)
         pin5.addTarget(self, action: #selector(self.textDidChange(textField:)), for: UIControl.Event.editingChanged)
         pin6.addTarget(self, action: #selector(self.textDidChange(textField:)), for: UIControl.Event.editingChanged)
-
-
+        
         submitButton.isEnabled = false
     }
     
@@ -100,23 +99,51 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
             case pin5:
                 pin6.becomeFirstResponder()
                 pin5.layer.borderColor = UIColor.blue.cgColor
-                
                 break
             case pin6:
-                pin6.resignFirstResponder()
+//                pin6.resignFirstResponder()
                 pin6.layer.borderColor = UIColor.blue.cgColor
                 submitButton.titleLabel?.textColor = UIColor(ciColor: .white)
                 break
             default:
                 break
             }
-            
-            if (pin1.hasText && pin2.hasText && pin3.hasText && pin4.hasText && pin5.hasText && pin6.hasText) {
-                submitButton.backgroundColor = UIColor(named: "Primary")
-                submitButton.layer.cornerRadius = 10
-                submitButton.isEnabled = true
-                submitButton.titleLabel?.textColor = UIColor(ciColor: .white)
+        } else if text!.isEmpty {
+            switch textField{
+            case pin6:
+                pin5.becomeFirstResponder()
+                pin6.layer.borderColor = UIColor.clear.cgColor
+//                break
+            case pin5:
+                pin4.becomeFirstResponder()
+                pin5.layer.borderColor = UIColor.clear.cgColor
+//                break
+            case pin4:
+                pin3.becomeFirstResponder()
+                pin4.layer.borderColor = UIColor.clear.cgColor
+//                break
+            case pin3:
+                pin2.becomeFirstResponder()
+                pin3.layer.borderColor = UIColor.clear.cgColor
+//                break
+            case pin2:
+                pin1.becomeFirstResponder()
+                pin2.layer.borderColor = UIColor.clear.cgColor
+//                break
+            case pin1:
+                pin1.becomeFirstResponder()
+                pin1.layer.borderColor = UIColor.clear.cgColor
+//                break
+            default:
+                break
             }
+        }
+        
+        if (pin1.hasText && pin2.hasText && pin3.hasText && pin4.hasText && pin5.hasText && pin6.hasText) {
+            submitButton.backgroundColor = UIColor(named: "Primary")
+            submitButton.layer.cornerRadius = 10
+            submitButton.isEnabled = true
+            submitButton.titleLabel?.textColor = UIColor(ciColor: .white)
         }
     }
     
