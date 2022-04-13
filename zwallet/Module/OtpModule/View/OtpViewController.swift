@@ -57,23 +57,21 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
                 break
             case pin4:
                 pin5.becomeFirstResponder()
-                print(pin4.text)
                 break
             case pin5:
                 pin6.becomeFirstResponder()
                 break
             default:
                 pin6.resignFirstResponder()
-                submitButton.backgroundColor = UIColor(named: "primaryColor")
+                break
+            }
+            
+            if (pin1.hasText && pin2.hasText && pin3.hasText && pin4.hasText && pin5.hasText && pin6.hasText) {
+                submitButton.backgroundColor = UIColor(named: "Primary")
                 submitButton.layer.cornerRadius = 10
                 submitButton.titleLabel?.textColor = UIColor(ciColor: .white)
                 submitButton.isEnabled = true
-                break
             }
-        }
-    
-        else {
-            
         }
     }
     
@@ -87,9 +85,9 @@ class OtpViewController: UIViewController, UITextFieldDelegate {
         let pin6 = pin6.text ?? ""
         
         let otp: String = "\(pin1)\(pin2)\(pin3)\(pin4)\(pin5)\(pin6)"
-        print(otp)
-        
-        self.presenter?.confirmOtp(email: email, otp: otp)
+        if otp.count == 6 {
+            self.presenter?.confirmOtp(email: email, otp: otp)
+        }
     }
 }
 

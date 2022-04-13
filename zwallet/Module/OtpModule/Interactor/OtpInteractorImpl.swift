@@ -17,7 +17,12 @@ class OtpInteractorImpl: OtpInteractorProtocol {
     
     func confirmOtp(email: String, otp: String) {
         self.authNetworkManager.confirmOtp(email: email, otp: otp) { data, error in
-            if let otpData = data {
+            guard let otpData = data else {
+                self.interactorOutput?.otpResult(isSuccess: false)
+                return
+            }
+            
+            if otpData.status == 200 {
                 self.interactorOutput?.otpResult(isSuccess: true)
             } else {
                 self.interactorOutput?.otpResult(isSuccess: false)

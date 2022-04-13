@@ -62,7 +62,7 @@ code via Email</string>
                                                 <constraint firstAttribute="height" constant="60" id="56G-YE-EpZ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="5s0-0L-Qac"/>
                                             </connections>
@@ -73,7 +73,7 @@ code via Email</string>
                                                 <constraint firstAttribute="height" constant="60" id="dbM-7v-At4"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="QnZ-3M-0p0"/>
                                             </connections>
@@ -84,7 +84,7 @@ code via Email</string>
                                                 <constraint firstAttribute="height" constant="60" id="phT-Bf-Nrx"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="HLJ-Go-OhM"/>
                                             </connections>
@@ -95,7 +95,7 @@ code via Email</string>
                                                 <constraint firstAttribute="height" constant="60" id="BAr-ZI-ryW"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="GS7-cU-68b"/>
                                             </connections>
@@ -106,7 +106,7 @@ code via Email</string>
                                                 <constraint firstAttribute="height" constant="60" id="Pmf-IY-uLT"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="GF3-js-4g4"/>
                                             </connections>
@@ -117,7 +117,7 @@ code via Email</string>
                                                 <constraint firstAttribute="height" constant="60" id="3Xf-sE-eWQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES" textContentType="one-time-code"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                                             <connections>
                                                 <outlet property="delegate" destination="-1" id="eTf-RN-ehG"/>
                                             </connections>
