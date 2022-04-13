@@ -18,7 +18,7 @@
                 <outlet property="pin4" destination="baP-Q4-9PO" id="osx-nN-1lT"/>
                 <outlet property="pin5" destination="1KR-ga-U13" id="nhT-h8-zxv"/>
                 <outlet property="pin6" destination="D45-AJ-BRZ" id="Ozy-X1-VI4"/>
-                <outlet property="submitButton" destination="FIx-Cq-HNI" id="5Em-cW-skE"/>
+                <outlet property="submitButton" destination="SCB-tK-gik" id="qoD-5Q-ZJu"/>
                 <outlet property="view" destination="MhZ-1b-WXz" id="cVz-LW-VMq"/>
             </connections>
         </placeholder>
@@ -129,51 +129,54 @@ code via Email</string>
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-Cq-HNI">
-                            <rect key="frame" x="16" y="584.5" width="382" height="57"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="57" id="EpA-jc-BZi"/>
-                            </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Confirm" cornerStyle="large">
-                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
-                                <color key="baseForegroundColor" name="titleDarkColor"/>
-                                <color key="baseBackgroundColor" name="descriptionColor"/>
-                            </buttonConfiguration>
-                            <connections>
-                                <action selector="confirmButtonAction:" destination="-1" eventType="touchUpInside" id="Ksq-Qz-jus"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="FIx-Cq-HNI" firstAttribute="leading" secondItem="gJ4-em-h1B" secondAttribute="leading" constant="16" id="7Rg-Zp-Wpv"/>
                         <constraint firstItem="q91-wT-D5b" firstAttribute="top" secondItem="ZF6-Qk-gIN" secondAttribute="bottom" constant="50" id="E3Y-mc-XqR"/>
                         <constraint firstItem="NdQ-XA-9vM" firstAttribute="top" secondItem="gJ4-em-h1B" secondAttribute="top" constant="40" id="NTZ-uG-26w"/>
-                        <constraint firstAttribute="trailing" secondItem="FIx-Cq-HNI" secondAttribute="trailing" constant="16" id="QqY-63-XZ1"/>
                         <constraint firstItem="q91-wT-D5b" firstAttribute="leading" secondItem="gJ4-em-h1B" secondAttribute="leading" constant="16" id="aF6-S7-hfl"/>
-                        <constraint firstAttribute="bottom" secondItem="FIx-Cq-HNI" secondAttribute="bottom" constant="10" id="hiz-iv-HuB"/>
                         <constraint firstItem="ZF6-Qk-gIN" firstAttribute="top" secondItem="NdQ-XA-9vM" secondAttribute="bottom" constant="20" id="ih2-pN-4fl"/>
                         <constraint firstItem="ZF6-Qk-gIN" firstAttribute="centerX" secondItem="gJ4-em-h1B" secondAttribute="centerX" id="o07-kT-5NZ"/>
                         <constraint firstItem="NdQ-XA-9vM" firstAttribute="centerX" secondItem="gJ4-em-h1B" secondAttribute="centerX" id="pgS-S3-zxO"/>
                         <constraint firstAttribute="trailing" secondItem="q91-wT-D5b" secondAttribute="trailing" constant="16" id="zUH-YS-lha"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCB-tK-gik">
+                    <rect key="frame" x="16" y="788.5" width="382" height="33.5"/>
+                    <color key="backgroundColor" name="GrayButton"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Confirm">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                        <color key="baseForegroundColor" name="GrayButtonLabel"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="confirmButtonAction:" destination="-1" eventType="touchUpInside" id="V8V-3Q-YBJ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="J2S-lq-7Ay"/>
             <color key="backgroundColor" name="backgrounfColor"/>
             <constraints>
+                <constraint firstItem="J2S-lq-7Ay" firstAttribute="bottom" secondItem="SCB-tK-gik" secondAttribute="bottom" constant="40" id="0y1-dd-i3S"/>
                 <constraint firstItem="SQz-GO-NtE" firstAttribute="top" secondItem="J2S-lq-7Ay" secondAttribute="top" constant="75" id="AJK-aE-Lvt"/>
+                <constraint firstItem="SCB-tK-gik" firstAttribute="leading" secondItem="J2S-lq-7Ay" secondAttribute="leading" constant="16" id="ECN-tY-4eF"/>
                 <constraint firstItem="gJ4-em-h1B" firstAttribute="top" secondItem="SQz-GO-NtE" secondAttribute="bottom" constant="60" id="I5S-Lm-yjb"/>
                 <constraint firstItem="J2S-lq-7Ay" firstAttribute="trailing" secondItem="gJ4-em-h1B" secondAttribute="trailing" id="Ta4-7m-lJy"/>
                 <constraint firstItem="gJ4-em-h1B" firstAttribute="leading" secondItem="J2S-lq-7Ay" secondAttribute="leading" id="cq8-pQ-MCe"/>
                 <constraint firstItem="SQz-GO-NtE" firstAttribute="centerX" secondItem="MhZ-1b-WXz" secondAttribute="centerX" id="g75-Eh-va3"/>
+                <constraint firstItem="J2S-lq-7Ay" firstAttribute="trailing" secondItem="SCB-tK-gik" secondAttribute="trailing" constant="16" id="lp9-C3-W9M"/>
                 <constraint firstItem="J2S-lq-7Ay" firstAttribute="bottom" secondItem="gJ4-em-h1B" secondAttribute="bottom" id="wRa-4Y-F7Y"/>
             </constraints>
             <point key="canvasLocation" x="-465" y="143"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="GrayButton">
+            <color red="0.77600002288818359" green="0.77600002288818359" blue="0.78400003910064697" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayButtonLabel">
+            <color red="0.23500001430511475" green="0.23500001430511475" blue="0.2630000114440918" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="backgrounfColor">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -182,9 +185,6 @@ code via Email</string>
         </namedColor>
         <namedColor name="primaryColor">
             <color red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="titleDarkColor">
-            <color red="0.22745098039215686" green="0.23921568627450981" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
