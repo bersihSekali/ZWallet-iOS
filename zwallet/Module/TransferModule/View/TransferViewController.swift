@@ -27,6 +27,7 @@ class TransferViewController: UIViewController {
 
         amountLabel.delegate = self
         notesField.delegate = self
+        transferButton.isEnabled = false
         
         profileWrapper.layer.cornerRadius = 50
         profileWrapper.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
